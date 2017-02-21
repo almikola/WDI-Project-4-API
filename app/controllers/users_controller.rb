@@ -38,6 +38,11 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  def email_search
+    @user = User.find(params[:email])
+    render json: @user
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

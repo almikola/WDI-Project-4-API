@@ -16,7 +16,7 @@ class InvitationsController < ApplicationController
   # POST /invitations
   def create
     @invitation = Invitation.new(invitation_params)
-
+    @invitation.sender_id = current_user.id
     if @invitation.save
       render json: @invitation, status: :created, location: @invitation
     else

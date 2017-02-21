@@ -1,4 +1,8 @@
 class InvitationSerializer < ActiveModel::Serializer
-  attributes :id, :receiver_id, :status
-  has_one :event
+  attributes :id, :status, :receiver
+  belongs_to :event
+end
+
+def receiver
+  UserSerializer.new(self.receiver_id).attributes
 end
