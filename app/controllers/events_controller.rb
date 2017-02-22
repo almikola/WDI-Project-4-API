@@ -35,6 +35,9 @@ class EventsController < ApplicationController
 
   # DELETE /events/1
   def destroy
+    Invitation.all.where(sender_id: @event['owner_id']).map {|invitation|
+      invitation.destroy
+    }
     @event.destroy
   end
 

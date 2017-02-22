@@ -5,11 +5,15 @@ Invitation.destroy_all
 User.create!([
   {
     email: "kenny@kenny.com",
+    first_name: "Kenny",
+    last_name: "Kenny",
     password: "password",
     password_confirmation: "password"
   },
   {
     email: "julie@julie.com",
+    first_name: "Julie",
+    last_name: "Julie",
     password: "password",
     password_confirmation: "password"
   }

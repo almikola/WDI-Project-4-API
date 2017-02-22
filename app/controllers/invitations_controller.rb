@@ -19,6 +19,7 @@ class InvitationsController < ApplicationController
     @invitation.sender_id = current_user.id
     if @invitation.save
       render json: @invitation, status: :created, location: @invitation
+      # InvitationMailer.invitation_email(@user).deliver_now
     else
       render json: @invitation.errors, status: :unprocessable_entity
     end
@@ -46,6 +47,9 @@ class InvitationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def invitation_params
-      params.require(:invitation).permit(:receiver_id, :event_id, :status)
+      print '*******************************************'
+      p params
+      print '**********************************************'
+      params.require(:invitation).permit(:receiver_id, :event_id, :status, :invitation_lat, :invitation_lng)
     end
 end
