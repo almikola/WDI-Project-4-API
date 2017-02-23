@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170220122348) do
     t.string   "title"
     t.date     "date"
     t.time     "time"
+    t.string   "image"
     t.integer  "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170220122348) do
     t.string   "email"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "image"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

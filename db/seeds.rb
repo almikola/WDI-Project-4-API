@@ -8,14 +8,16 @@ User.create!([
     first_name: "Kenny",
     last_name: "Kenny",
     password: "password",
-    password_confirmation: "password"
+    password_confirmation: "password",
+    image: "http://www.fillmurray.com/300/300"
   },
   {
     email: "julie@julie.com",
     first_name: "Julie",
     last_name: "Julie",
     password: "password",
-    password_confirmation: "password"
+    password_confirmation: "password",
+    image: "http://www.fillmurray.com/301/301"
   }
 ])
 
@@ -24,12 +26,14 @@ Event.create!([
     title: "Dinner with Ladies",
     date: Date.new,
     time: DateTime.new,
+    image: "http://www.fillmurray.com/302/302",
     owner_id: User.last.id
   },
   {
     title: "Dinner with Lads",
     date: Date.new,
     time: DateTime.new,
+    image: "http://www.fillmurray.com/303/303",
     owner_id: User.first.id
   }
 ])
