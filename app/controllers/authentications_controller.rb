@@ -2,9 +2,7 @@ class AuthenticationsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def register
-    binding.pry
     user = User.new(user_params)
-
     if user.save
       token = Auth.issue({id: user.id})
       render json: { token: token, user: UserSerializer.new(user) }, status: :ok

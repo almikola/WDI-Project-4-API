@@ -17,8 +17,6 @@ gem 'active_model_serializers'
 gem 'jwt'
 gem 'httparty'
 
-
-gem "pry-rails"
 group :development, :test do
   gem 'byebug', platform: :mri
 end
