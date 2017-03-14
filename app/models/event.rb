@@ -17,9 +17,9 @@ class Event < ApplicationRecord
   end
 
   private
-  def set_default_active
-    self.active = 'yes'
-  end
-
+  
+    def set_default_active
+      self.active = 'yes'
+    end
 
 end
