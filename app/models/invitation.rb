@@ -5,7 +5,7 @@ class Invitation < ApplicationRecord
   belongs_to :receiver, foreign_key: :receiver_id, class_name: "User"
   belongs_to :sender, foreign_key: :sender_id, class_name: "User"
 
-  before_before_validation :set_sender
+  before_validation :set_sender
   before_validation :set_default_status
 
   validate :check_status
