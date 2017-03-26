@@ -7,7 +7,7 @@ class RestaurantController < ApplicationController
       "user-key" => "d8a379575db4bfedc9c173a595ff57b3"
     }
 
-    url = "https://developers.zomato.com/api/v2.1/search?lat=#{params[:latitude]}&lon=#{params[:longitude]}&radius=300&sort=rating"
+    url = "https://developers.zomato.com/api/v2.1/search?lat=#{params[:latitude]}&lon=#{params[:longitude]}&radius=1000&sort=rating"
 
     zomato_restaurants = HTTParty.get(url, :headers => headers)
 
