@@ -31,17 +31,17 @@ u3 = User.create!({
 
 Event.create!([
   {
-    title: "Brunch!",
-    date: "2017-04-15",
-    time: "14:05",
-    image: "http://brunch.london/media/1338970/villandry-pwf-0061home.jpg",
+    title: "Dinner with Ladies",
+    date: Date.new,
+    time: DateTime.new,
+    image: "http://www.fillmurray.com/302/302",
     owner_id: u1.id
   },
   {
-    title: "Dinner",
-    date: "2017-04-20",
-    time: "20:05",
-    image: "https://s-media-cache-ak0.pinimg.com/originals/de/38/27/de38275bd641c68e4075e58e788a5ec1.jpg",
+    title: "Dinner with Lads",
+    date: Date.new,
+    time: DateTime.new,
+    image: "http://www.fillmurray.com/303/303",
     owner_id: u1.id
   }
 ])
@@ -50,9 +50,5 @@ Invitation.create!([
   {
     event_id: Event.first.id,
     receiver_id: u2.id
-  },
-  {
-    event_id: Event.last.id,
-    receiver_id: u3.id
   }
 ])
